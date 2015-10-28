@@ -1,9 +1,7 @@
-# Version 0.1
-
-Version 0.1 is the starting point of the Student Grade Table Project. LearningFuze has provided a base structure that
-includes HTML structure that will need to be updated with boostrap classes. For this version we are looking to see that you
-understand how to style an application with bootstrap, take input values and apply them to objects, and update the DOM
-with a visual of those objects stored.
+## Version 0.1
+#### Description
+Version 0.1 is the starting point of the Calculator Project. You must create the base structure and styles, using bootstrap as you deem necessary. For this version we are looking to see that you
+understand how to create the basic structure of a web application, style it, and make it reasonably responsive.  No functionality will be encoded with this version.
 
 > ##### Related Reading
 > - Coming Soon
@@ -15,7 +13,24 @@ with a visual of those objects stored.
 > - Coming Soon
 
 ## Getting Started
-> - Are you on your master branch?
+> - Have you forked the repo from the LearningFuze account?
+        - **Yes** - continue to next step
+        - **No** - Fork from the Learningfuze Repo to your account
+        - **I don't know** - Look at **your** github account and see if you can find the appropriate repo there.
+        
+- Have you cloned it from **your** repo to your local system?
+        - **Yes** - continue to next step
+        - **No** 
+            - Go to your LFZ folder. 
+            - use `git clone [repo address]` to make a local copy on your development machine.
+        - **I don't know** - If you have a copy, use `git remote -v` to see what address it came from.  If it is from the LearningFuze account you cloned the **wrong repo**.  If it is your address you have it right.  If there is no copy, you haven't cloned it yet!
+        
+- Are you in the right folder?
+
+        - **Yes** - You are in the folder named after the repo you cloned, go to next step
+        - **No** - You are most likely still in your LFZ folder where you cloned from. Change directories to the repo folder.
+        - **I don't know** - type `pwd` and press enter.  If you don't see the right folder, use `cd [folder name]` till you get to the right folder.  Use `cd ..` to go backwards a step in your folder structure, if necessary.
+- Are you on your master branch?
     - **Yes** - continue to "Pull Latest Changes"
     - **I dont know** Run the command below
         - `git branch` - this will highlight the branch you are currently on
