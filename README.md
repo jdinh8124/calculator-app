@@ -4,7 +4,7 @@ Version 0.1 is the starting point of the Calculator Project. You must create the
 understand how to create the basic structure of a web application, style it, and make it reasonably responsive.  No functionality will be encoded with this version.
 
 > ##### Related Reading
-> - Coming Soon
+> - JS Reference Variables
 
 > ##### Related Videos
 > - Coming Soon
@@ -53,30 +53,20 @@ understand how to create the basic structure of a web application, style it, and
 
 
 ## Scope
-> - Styling
-    - Apply bootstrap styling to all <a href="http://getbootstrap.com/css/#buttons">buttons</a> & <a href="http://getbootstrap.com/css/#forms" target="_blank">form elements</a>
-    - Apply bootstrap <a href="http://getbootstrap.com/css/#tables" target="_blank">table styling</a>
-    - Apply look using boostrap only based on the designs <a href="https://github.com/ej020586/SGT/tree/v.1#design">below</a>. <b>Please note that no additional style sheets have been added</b>
-- JS Functionality
-    - Build out all functions & variables based on jsDoc (<a href="https://en.wikipedia.org/wiki/JSDoc" target="_blank">What is this?</a>) comments inside the script.js file
-    - Form
-        - On click of add button
-            - call appropriate function in on click attribute
-            - Add values inside the form into an object and store that object in the student_array global variable
-            - Display all student data stored in the student_array inside the bootstrap table structure
-            - Clear values inside the form elements
-        - On click of cancel button
-            - Clear values inside the form elements
-    - on Dom Load
-        - Reset application to its default state
-        - Display all student data stored in the student_array inside the bootstrap table structure
-    - on update of student_array data, calculate and show average student grade rounded to the nearest whole number and display inside .avgGrade element
+> - Layout
+    - Create a standard calculator layout with at least the following:
+        - 9 numeric keys: 0 through 9
+        - 4 arithmetic function: -, +, *, /
+        - equation buttons: =
+        - 2 clear buttons: C (Clear), and CE (Clear Everything/All)
+        - 1 display area for calculations / results
+- Styling:
+        - Apply whatever styling method you choose.  You can use standard CSS or Bootstrap
+        - Calculator should be relatively responsive between mobile and desktop
+        - You do not need to make it like the displayed calculator.  You should make the stlyling your own!
+   
 
 ## Design
-> #### Mobile appearance
-<img src="https://cloud.githubusercontent.com/assets/10343746/9148427/0384d076-3d30-11e5-83ff-4d10ae2daf70.png" width="200"/>
-#### No Data available appearance
-<img src="https://cloud.githubusercontent.com/assets/10343746/9148435/1d8f2bc4-3d30-11e5-926d-72a2a086fd8b.png" width="500"/>
-#### Data available appearance
-<img src="https://cloud.githubusercontent.com/assets/10343746/9148437/22e2566e-3d30-11e5-9401-ba2cb8309d65.png" width="500"/>
+> #### Example appearance
+Example: <img src="https://drive.google.com/open?id=0B7eOl4joefDuRWlzMUt6TG5TMXc">
 
