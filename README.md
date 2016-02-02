@@ -4,22 +4,21 @@ Version 0.1 is the starting point of the Calculator Project. You must create the
 understand how to create the basic structure of a web application, style it, and make it reasonably responsive.  No functionality will be encoded with this version.
 
 > ##### Related Reading
-> - <a href="https://drive.google.com/open?id=0B6piuc4O8oQmMmo1YkhQYjY1Rnc" target="_blank">JS Reference Variables 1</a>
-- <a href="https://drive.google.com/open?id=0BwjF2I7CBLDVNTY1ZTBIOWNnbUk" target="_blank">JS Reference Variables 2</a>
-- <a href="https://drive.google.com/open?id=0B7eOl4joefDuRTViMjhrcm9raDQ" target="_blank">Event Delegation</a>
-- <a href="https://drive.google.com/open?id=0BwjF2I7CBLDVbG5jSkZzTFlHWlU" target="_blank">Repeat Blocks</a>
+> - <a href="http://portal.learningfuze.com/node/1208" target="_blank">JS Reference Variables 1</a>
+- <a href="http://portal.learningfuze.com/node/1207" target="_blank">JS Reference Variables 2</a>
+- <a href="http://portal.learningfuze.com/node/1199" target="_blank">Event Delegation</a>
+- <a href="http://portal.learningfuze.com/node/1959" target="_blank">Repeat Blocks</a>
 
 > ##### Related Videos
-> - <a href="https://plus.google.com/events/cn0tp0a0484m5oq5ft23l5rrm68" target="_blank">JS Reference Variables</a>
-- <a href="https://plus.google.com/events/cja0mfet542cvtmc5ompe24ahes" target="_blank">JS Reference Variables 2</a>
-- <a href="https://plus.google.com/events/cg2n17hsqrj64cf4iekfo0j80us" target="_blank">JS Reference Variables 2-2</a>
-- <a href="https://plus.google.com/events/cn0tp0a0484m5oq5ft23l5rrm68" target="_blank">JS Repeat Blocks</a>
-- <a href="https://plus.google.com/events/c3nvb7sbb66rphgl2af2c2t1occ" target="_blank">JS Event Delegation</a>
+> - <a href="http://portal.learningfuze.com/node/1944" target="_blank">JS Reference Variables</a>
+- <a href="http://portal.learningfuze.com/node/1943" target="_blank">JS Reference Variables 2</a>
+- <a href="http://portal.learningfuze.com/node/1961" target="_blank">JS Repeat Blocks</a>
+- <a href="http://portal.learningfuze.com/node/1206" target="_blank">JS Event Delegation</a>
 
 > ##### Related Prototypes
-> - <a href="https://github.com/Learning-Fuze/prototypes/tree/master/js_ref_data_types" target="_blank">JS Reference Variables</a>
-> - <a href="https://github.com/Learning-Fuze/prototypes/tree/master/js_loops" target="_blank">JS Repeat Blocks</a>
-> - <a href="https://github.com/Learning-Fuze/prototypes/tree/master/js_event_delegation" target="_blank">JS Event Delegation</a>
+> - <a href="http://learning-fuze.github.io/prototypes_C7/#/JS-Ref-Data-Types" target="_blank">JS Reference Variables</a>
+> - <a href="http://learning-fuze.github.io/prototypes_C7/#/JS-Repeat-Blocks" target="_blank">JS Repeat Blocks</a>
+> - <a href="http://learning-fuze.github.io/prototypes_C7/#/JS-Event-Delegation" target="_blank">JS Event Delegation</a>
 
 ## Getting Started
 > - Have you forked the repo from the LearningFuze account?
