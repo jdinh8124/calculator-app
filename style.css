@@ -5,7 +5,7 @@ body {
     position: relative;
     height: 600px;
     width: 400px;
-    border-radius: 20px;
+    border-radius: 15px;
     background-color: black;
 }
 
@@ -22,7 +22,7 @@ body {
     width: 86%;
     height: 80%;
     background-color: white;
-    border-radius: 20px;
+    border-radius: 15px;
 }
 
 #bot-part {
@@ -40,13 +40,26 @@ body {
     height: 18.2%;
     text-align: center;
     margin: 1.2% .6%;
-    border-radius: 20px;
+    border-radius: 15px;
     font-size: 65px;
+    border-style: none;
+}
+
+#clear-all:focus, #clear-entry:focus,
+#zero:focus, #one:focus, #two:focus, #three:focus, #four:focus,
+#five:focus, #six:focus, #seven:focus, #eight:focus, #nine:focus,
+#decimal:focus, #equals:focus, #add:focus, #subtract:focus, #multiply:focus, #divide:focus {
+    outline: none;
 }
 
 #clear-all, #clear-entry {
     width: 48%;
+    background-color: #1d78e1;
+}
+
+#clear-all:hover, #clear-entry:hover {
     background-color: dodgerblue;
+    cursor: pointer;
 }
 
 #zero, #one, #two, #three, #four, #five, #six, #seven, #eight, #nine,
@@ -58,6 +71,17 @@ body {
     background-color: darkorange;
 }
 
+#zero:hover, #one:hover, #two:hover, #three:hover, #four:hover,
+#five:hover, #six:hover, #seven:hover, #eight:hover, #nine:hover {
+    background-color: orange;
+    cursor: pointer;
+}
+
 #decimal, #equals, #add, #subtract, #multiply, #divide {
+    background-color: #e13800;
+}
+
+#decimal:hover, #equals:hover, #add:hover, #subtract:hover, #multiply:hover, #divide:hover {
     background-color: orangered;
+    cursor: pointer;
 }
