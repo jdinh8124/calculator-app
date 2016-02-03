@@ -1,0 +1,55 @@
+#container {
+    position: relative;
+    height: 600px;
+    width: 400px;
+}
+
+#top-part {
+    display: block;
+    background-color: black;
+    width: 100%;
+    height: 20%;
+}
+
+#screen {
+    position: relative;
+    left: 10%;
+    top: 10%;
+    width: 80%;
+    height: 80%;
+    background-color: white;
+}
+
+#bot-part {
+    display: block;
+    background-color: black;
+    width: 100%;
+    height: 80%;
+}
+
+#clear-all, #clear-entry {
+    position: relative;
+    display: inline-block;
+    width: 48%;
+    height: 19%;
+    background-color: blue;
+    text-align: center;
+}
+
+#zero, #one, #two, #three, #four, #five, #six, #seven, #eight, #nine,
+#decimal, #equals, #add, #subtract, #multiply, #divide {
+    position: relative;
+    display: inline-block;
+    width: 23%;
+    height: 19%;
+    margin: .5%;
+    text-align: center;
+}
+
+#zero, #one, #two, #three, #four, #five, #six, #seven, #eight, #nine {
+    background-color: darkorange;
+}
+
+#decimal, #equals, #add, #subtract, #multiply, #divide {
+    background-color: orangered;
+}
