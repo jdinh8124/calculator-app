@@ -45,17 +45,17 @@ understand how to create the basic structure of a web application, style it, and
     - `git checkout master`
     - `git pull origin master` - **Now continue with the next steps**
 - Create a feature branch
-    - `git checkout -b v0.1`
+    - `git checkout -b version0.1`
 - Work on the scope defined <a href="https://github.com/Learning-Fuze/SGT/tree/v.1#scope">Below</a>
 - Add files to git
     - `git add .`
 - Commit files (Group files together)
-    - `git commit -m "SGT v0.1 - Your Name"`
+    - `git commit -m "Calculator v0.1 - Your Name"`
     - **Replace "Your Name" with your first and last name**
 - Send to gitHub (Push)
-    - `git push origin v0.1`
+    - `git push origin version0.1`
 - Create pull request
-    - Pull request should be made from v0.1 to **your repository's/teams** master branch
+    - Pull request should be made from version0.1 to **your repository's/teams** master branch
 
 ## Scope
 > - Layout
