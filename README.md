@@ -63,7 +63,7 @@ understand how to create the basic structure of a web application, style it, and
         - 9 numeric keys: 0 through 9
         - 4 arithmetic function: -, +, *, /
         - equation buttons: =
-        - 2 clear buttons: C (Clear), and CE (Clear Everything/All)
+        - 2 clear buttons: C (Clear), and CE (Clear Entry or current number)
         - 1 display area for calculations / results
 - Styling:
         - Apply whatever styling method you choose.  You can use standard CSS or Bootstrap
