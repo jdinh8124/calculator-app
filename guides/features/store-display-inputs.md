@@ -17,18 +17,23 @@ In this feature, the **HTML** and **CSS** of the calculator skeleton is provided
     - This variable will be used to hold all of our inputs that will be used for calculations.
 - Declare a function, `displayInputs`.
   - This function will be used to update the calculator display.
+  - Target / Select the element that is used for the display and change the text of that element to reflect what is in the `calculatorInputs` array.
 - Declare a function, `handleNumbers`.
-  - This function will be used to get the `text` value of each number that has been clicked on to then be used as potential numbers for our `calculatorInputs` array.
-  - In this function, you may want to use `this` or `event.target` to get the direct reference of the number element that triggered the event.
+  - This function will be used to get the `text` value of each number that has been clicked on to be used as potential numbers for our `calculatorInputs` array.
+  - In this function, you will want to use `this` or `event.target` to get the direct reference of the number element that triggered the event.
   - Get the `text` of that number clicked and concatenate that value to the `storedInput` variable.
+  - Using the `displayInputs` function, call this function to update the display.
 - Add a click event handler to the numbers.
-  - This click handler will use the `handleNumbers` function
+  - This click handler will use the `handleNumbers` function.
+  - Test this event handler by clicking on any of the number buttons on the calculator.
 - Declare a function, `handleOperators`.
-  - This function will be used to get the `text` value of each operator that has been clicked on to then be used as a potential operator for our `calculatorInputs` array.
-  - In this function, you may want to use `this` or `event.target` to get the direct reference of the operator element that triggered the event.
+  - This function will be used to get the `text` value of each operator that has been clicked on to be used as a potential operator for our `calculatorInputs` array.
+  - In this function, you will want to use `this` or `event.target` to get the direct reference of the operator element that triggered the event.
   - Get the `text` of that operator clicked and concatenate that value to the `storedInput` variable.
+  -  Using the `displayInputs` function, call this function to update the display.
 - Add a click event handler to the numbers.
-  - This click handler will use the `handleOperators` function
+  - This click handler will use the `handleOperators` function.
+  - Test this event handler by clicking on any of the operator buttons on the calculator.
 - Each of the functions `handleNumbers` and `handleOperators` will call the `displayInputs` function to update the display as the user is clicking on the number and operator buttons on the calculator.
 
 
