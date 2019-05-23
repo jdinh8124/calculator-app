@@ -44,13 +44,13 @@ After navigating into this repository, you will want to start by creating a new 
   - `git status`
   - `git checkout master`
   - `git pull origin master`
-  - `git checkout -b skeleton`
+  - `git checkout -b handlingInputs`
 
 You are now ready to start on the first feature!
 
 ### Core Feature
-- Store and Display Inputs - [Instructions](guides/features/skeleton.md)
-- Calculate and Display Inputs - [Instructions](guides/features/tracking-stats.md)
+- Store and Display Inputs - [Instructions](guides/features/store-display-inputs.md)
+- Calculate and Display Inputs - [Instructions](guides/features/calculate-inputs.md)
 
 ### MVP Features
 - <a href="https://docs.google.com/spreadsheets/u/1/d/1HRpRqdyQrax5vgwrVatcOxSxly6GHXXfZuzc0lb9Tfg/pubhtml#" target="_blank">Basic, Comprehensive, Advanced, and Extra Operations</a>
