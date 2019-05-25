@@ -3,48 +3,109 @@ Instructions - Skeleton
 
 ### Overview
 
-In this feature, you are creating the skeleton of elements that will hold any additional elements that will make up the project you are creating. Design docs are provided to illustrate what you will be building toward using HTML and CSS.
+In this feature, You will add the functionality of being able to calculate and display the two numbers and operator you were able to store and display from the previous feature set.
 
-- In an `index.html` file, your `<body>` will have three main sections:
-  - `<header>`, will be used for a heading and/or logo.
-    - It will contain a single text element to hold the title.
-  - `<aside>`, will be used to hold data / information regarding game stats.
-    - You will use a single text element for the "stats" title.
-    - You will use six divs for the stats content as shown in the design doc.
-    - Each div will contain a single text element to hold the text content.
-  - `<main>`, will be used to hold the cards to play through your Memory Match game.
-    - You will create the following structure:
-      - A "container" div which will contain all of the cards.
-      - Inside of that container, you will include a div for each of the 18 cards.
-      - You will then nest two child divs in each of the card divs.
-        - The first child will hold the "lfz-card" background-image.
-        - The second child will hold the background images you are trying to match.
-- In a `style.css` file, include the CSS properties to get a rough match of the provided design doc.
-  - Keep in mind that the initial build will be for a static page.
-  - It will be refactored into full responsiveness prior to inclusion in your portfolio, but:
-    - You do not have the time for a responsive build at this point.
-    - Focus on learning how to position elements on the page.
-      - Create classes on the elements you want to apply CSS to, use those classes for CSS selection.
-        - Do not use ids for styling, ids are for JavaScript selection.
-      - Use borders / background colors to ease the viewing of the elements you want to position on the page.
-      - Use the styles feature of the Chrome Inspector to make changes in real time.
-  - And Lastly, CSS is hard! Make sure to ask questions and keep at it!
+<details>
+<summary>1. Create the calculate function which will calculate based on the contents of the calculationArray </summary>
+
+  - Declare a new function `calculate`.
+    - It will take three parameters
+      - num1
+      - num2
+      - operator
+    - This function will calculate the result of the two numbers and the operator passed into the function's parameters as arguments.
+    - Inside the function
+      - declare a variable called `number1`
+        - store in it the result of running the `.parseFloat()` method on the `num1` parameter
+        - we are using `.parseFloat()` instead of `.parseInt()` because we want to allow for numbers with decimels eventually
+        - Documentation on `.parseInt()` and `.parseFloat()` READ!!!
+          - `.parseInt()`: https://www.w3schools.com/jsref/jsref_parseint.asp
+          - `.parseFloat()`: https://www.w3schools.com/jsref/jsref_parsefloat.asp
+      - declare a variable called `number2`
+        - store in it the result of running the `.parseFloat()` method on the `num2` parameter.
+    - Test this functionality by calling the `calculate` function and passing in 2 numbers and an operator as arguments, then console log the two `number` variables to make sure you are properly storing the converted numbers
+      - Once this work, move on to the next step
+    - Now that you have converted the strings into numbers:
+      - declare a variable, `result`.
+        - assign it the value of `null`
+        - it is going to store the result of the calculation so that it can be returned.
+    - Now declare a switch statement
+      - you will pass in the `operator` variable as the expression
+    - Create a case for each operator that will perform the calculation on `number1` and `number2` based on the chosen operator.
+      - for example:
+        case "+":
+          result = number1 + number2
+          break;
+    - Once you have completed the switch
+      - call the `calculate` function again with the proper arguments and console log the result variable at the end of the function
+        - If you have done everything correctly, the console log should contain the result of the calculation.
+        - once you have this functionality, remove the console log and move on to the next step.
+    - The last thing to do in this function is to return the result variable.
+      - This will ensure that the result of the calculation is returned to the place when the function is called.
+      - For the last test console log the call of the `calculate` function with the proper parameters. The console log should contain the result of the function call.
+      - When this works, Congratulations, you have completed the calculate function!
+
+
+</details>
+
+<details>
+
+<summary>2. Use the calculate function to calculate the user supplied numbers and operator</summary>
+
+  - The following will be done in the `equalsButtonHandler` function
+    - Below the code that is already in the function from previous steps
+      - declare a variable `answer`
+      - assign the `answer` variable the result of calling the `calculate` function with the numbers and operator stored in the calculation array.
+        - for example:
+          - var answer = calculate(calculationArray[0], calculationArray[2], calculationArray[1]);
+          - Note the positions in the array that are used so that the arguments are passed in to match the order of the parameters.
+        - On the next line, console log the `answer` variable
+      - To test this new functionality:
+        - Open a fresh calculator
+        - enter the following inputs.
+          - Press 222
+          - Then press +
+          - Then press 222
+          - Then press =
+        - The console log of the `answer` variable you declared and assigned the result of calling the `calculate` function should be 444
+        - When this functionality is complete and working, move on to the next step!
+</details>
+
+<details>
+  <summary>3. Display the result of your calculations</summary>
+
+  - Now that you are able to calculate correctly based on your `calculationArray`, we are going to update the display with your calculated answer.
+    - The following will be done in the `equalsButtonHandler` function
+    - Below your previous work:
+      - push the `answer` variable into the `displayArray` array.
+      - call the `updateDisplay` function.
+    - Now test what you added using the previous test, once the correct answer of 444 is shown on your calculator's display, Congratulations! You have completed this step! and the core functionality of the calculator!
+</details>
+
+<details>
+  <summary>4. Moving Forward</summary>
+
+  - Now that you have completed the core functionality, what's next?
+    - There are many things to consider
+      - How do you continue to do calculations after the first one?
+        - What does that mean for when you have to reset the `calculationArray`?
+        - When should you be allowed to enter an operator into the calculator?
+        - How do you intergrate decimels?
+        - what about pemdas?
+    - Your Journey has only begun!
+      - The calculator is a difficult project, but it is extraordinally helpful for problem solving and logic skills because there are so many things that must be considered!
+    - Last thing:
+      - Make sure you use the inspector! Being able to watch your code will make working through the logic much easier!
+        - And not easy, but easier!
+      - And finally, keep working on it! Its great practice for JavaScript skills you will need!
+</details>
+
+
+
+
 
 
 ### Design Docs
-
-
-
-#### Initial Build
-![initial-build](../images/basic-template.jpg)
-
-#### Final Design with all assests
-![demo-pic-1](../images/demo-pic-1.jpg)
-
-#### With cards flipped to show images
-![demo-pic-2](../images/demo-pic-2.jpg)
-
-
 
 
 
