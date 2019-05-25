@@ -98,6 +98,7 @@ In this feature, You will add the functionality of being able to calculate and d
       - Make sure you use the inspector! Being able to watch your code will make working through the logic much easier!
         - And not easy, but easier!
       - And finally, keep working on it! Its great practice for JavaScript skills you will need!
+      
 </details>
 
 
