@@ -40,13 +40,13 @@ After navigating into this repository, you will want to start by creating a new 
 
 You are now ready to start on the first feature!
 
-### Core Feature
+### Core Features
 - Store and Display Inputs - [Instructions](guides/features/store-display-inputs.md)
 - Calculate and Display Inputs - [Instructions](guides/features/calculate-inputs.md)
 
-### MVP Features
+### Intermediate Features
 - <a href="https://docs.google.com/spreadsheets/u/1/d/1HRpRqdyQrax5vgwrVatcOxSxly6GHXXfZuzc0lb9Tfg/pubhtml#" target="_blank">Basic, Comprehensive, Advanced, and Extra Operations</a>
 
-### Challenge
+### Final Features
 - Operation Rollover
 - Operation Repeat
