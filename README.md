@@ -1,26 +1,60 @@
 # Calculator
 
-## Version 0.1
-#### Description
-Version 0.1 is the starting point of the Calculator Project. You must create the base structure and styles, using CSS or bootstrap as you deem necessary. For this version we are looking to see that you
-understand how to create the basic structure of a web application, style it, and make it reasonably responsive.  No functionality will be encoded with this version.
+## What are the specifications for the app?
+<details>
+<summary> &#8592; Click arrow for details</summary>
 
-- <a href="https://github.com/Learning-Fuze/calculator/tree/v0.1#getting-started">Getting Started</a>
-- <a href="https://github.com/Learning-Fuze/calculator/tree/v0.1#scope">View Scope</a>
-- <a href="https://github.com/Learning-Fuze/calculator/tree/v0.1#design">View Design</a>
-- <a href="https://github.com/Learning-Fuze/calculator/tree/v0.1#assignments---aka-criteria-for-success-on-this-version-of-the-project">View Assignments</a>
+1. Memory match is a matching game in which a player attempts to match the images contained on "playing cards".
 
-## Version 0.5
-#### Description
-Version 0.5 adds in the user functionality / logic of a calculator. This version introduces the basic operations that a calculator
-can complete and ties this functionality together with click events for you to interact with on the DOM.
+</details>
 
-- <a href="https://github.com/Learning-Fuze/calculator/tree/v0.5#getting-started">Getting Started</a>
-- <a href="https://github.com/Learning-Fuze/calculator/tree/v0.5#scope">View Scope</a>
+### Project Setup
 
-## Version 1
-#### Description
-Version 1 takes the layout and basic button click functionality built in the 2 previous versions and then ties in advanced calculation functionality. This version works toward different logical thought processes that you will be approaching from the provided testing sheet.
+Before starting on this project, you will need to **fork** and then **clone** this repository into your `lfz` folder on your current development environment.
 
-- <a href="https://github.com/Learning-Fuze/calculator/tree/v1#getting-started">Getting Started</a>
-- <a href="https://github.com/Learning-Fuze/calculator/tree/v1#scope">View Scope</a>
+1. Fork this repository from LearningFuze
+    - Click on the <kbd>**Fork**</kbd> button at the top right of the page.
+    - Select your Github user name to complete the fork
+
+2. Clone this repository to your development environment
+    - In your terminal, navigate to the location of your `lfz` folder
+    - `cd ~/lfz` or `cd ~/Desktop/lfz`
+    - `git clone https://github.com/[Your User Name]/calculator.git`
+
+3. Navigate into the `calculator` directory
+    - `cd calculator`
+    - You are now ready to get started!
+    - If you are not in the proper directory, navigate to the `lfz` folder, if you're not sure how, contact an instructor.
+
+## Getting Started
+
+After navigating into this repository, you will want to start by creating a new branch off of the `master` branch to contain the code required for the next feature of this project.
+
+### Before each feature
+
+- Make sure that the current branch says `master`.
+  - Check that with the `git status` command.
+    1. If you are on `master`:
+       - `git pull origin master`, will get your most up to date changes and update this branch.
+       - `git checkout -b FEATURE_NAME_HERE`, will create a new branch based on the name provided to represent this next feature.
+    2. If not, `git checkout master`, will take you back to the default branch.
+       - Go back to step 1.
+    3. If you're not sure how, contact an instructor.
+- **Example**
+  - `git status`
+  - `git checkout master`
+  - `git pull origin master`
+  - `git checkout -b handlingInputs`
+
+You are now ready to start on the first feature!
+
+### Core Feature
+- Store and Display Inputs - [Instructions](guides/features/store-display-inputs.md)
+- Calculate and Display Inputs - [Instructions](guides/features/calculate-inputs.md)
+
+### MVP Features
+- <a href="https://docs.google.com/spreadsheets/u/1/d/1HRpRqdyQrax5vgwrVatcOxSxly6GHXXfZuzc0lb9Tfg/pubhtml#" target="_blank">Basic, Comprehensive, Advanced, and Extra Operations</a>
+
+### Challenge
+- Operation Rollover
+- Operation Repeat

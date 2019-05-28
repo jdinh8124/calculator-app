@@ -1,0 +1,99 @@
+body {
+    height: 100vh;
+
+}
+body * {
+    box-sizing: border-box;
+}
+
+.calculator-body {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 70%;
+    width: 30%;
+    background-color: lavender;
+}
+.display-text {
+    text-align: right;
+    width: 98%;
+}
+.display-container {
+    position: relative;
+    top: 25px;
+    display: inline-block;
+    /* margin: 0 auto; */
+    height: 15%;
+    width: 85%;
+    background-color: peachpuff;
+    left: 7.5%;
+}
+
+.c-button-containers {
+    display: inline-block;
+    position: relative;
+    top: 28px;
+    left: 7.5%;
+    height: 15%;
+    width: 85%;
+    background-color: chartreuse;
+}
+.c-button, .ac-button {
+    position: relative;
+    top: 50%;
+    left: 26%;
+    transform: translate(-50%, -50%);
+    height: 75%;
+    width: 45%;
+    display: inline-block;
+    background-color: rebeccapurple;
+    margin: 0px;
+}
+
+.number-block {
+    display: inline-block;
+    position: relative;
+    height: 60%;
+    width: 60%;
+    background-color: chartreuse;
+    top: 28px;
+    left: 7.5%;
+    margin-top: 8px;
+    vertical-align: top;
+}
+.number, .decimal, .equals {
+    position: relative;
+    display: inline-block;
+    height: 23%;
+    width: 32%;
+    left: 2px;
+    margin-top: 3px;
+    background-color: hotpink;
+}
+.operator-column {
+    position: relative;
+    display: inline-block;
+    height: 60%;
+    width: 24%;
+    background-color: chartreuse;
+    top: 36px;
+    left: 7.5%;
+}
+.operator {
+    position: relative;
+    margin-top: 3px;
+    height: 24%;
+    background-color: cornflowerblue;
+}
+.center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin: 0;
+}
+
+p {
+    font-size: 3rem;
+}
