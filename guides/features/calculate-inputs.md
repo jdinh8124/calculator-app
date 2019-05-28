@@ -1,4 +1,4 @@
-Instructions - Skeleton
+Instructions - Calculation of stored values
 --
 
 ### Overview
@@ -98,7 +98,7 @@ In this feature, You will add the functionality of being able to calculate and d
       - Make sure you use the inspector! Being able to watch your code will make working through the logic much easier!
         - And not easy, but easier!
       - And finally, keep working on it! Its great practice for JavaScript skills you will need!
-      
+
 </details>
 
 
@@ -117,9 +117,9 @@ In this feature, You will add the functionality of being able to calculate and d
   - You will want to **add**, **commit**, and **push** the code that you have written to the appropriate Github repository.
     1. `git add .`
     2. `git commit -m "Description of the feature that you have implemented"`
-       - e.g. `git commit -m "Added simple HTML skeleton"`
+       - e.g. `git commit -m "added base calculation functionality"`
     3. `git push origin FEATURE_NAME_HERE`
-       - e.g. `git push origin skeleton`
+       - e.g. `git push origin basic-calculation`
 
 - Finally, you will want to create a pull request. This will merge the code from your newly **completed** feature branch into your `master` branch.
 
