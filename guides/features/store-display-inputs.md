@@ -94,7 +94,7 @@ In this feature, the **HTML** and **CSS** of the calculator skeleton is provided
         - use the `.text()` method to set the text of the `display-text` element to the value contained in the `displayText` variable.
           - documentation: https://www.w3schools.com/jquery/html_text.asp
   - Now that you have completed constructing the `updateDisplay` function.
-    - Call the `updateDisplay` function in your `numbersButtonHandler` function after the function has pushed the `stringNumberToPush` value into the `displayArray` array
+    - Call the `updateDisplay` function in your `numbersButtonHandler` function after the function has pushed the `inputtedNumber` value into the `displayArray` array
     - If everything works, you should see the numbers you click on show up in the display!
   - When that is complete, you have completed step 2:
 
