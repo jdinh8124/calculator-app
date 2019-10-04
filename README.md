@@ -1,5 +1,7 @@
 # Calculator
 
+> - Maintained by: `codingcodymiller`
+
 ### Project Setup
 
 Before starting on this project, you will need to **fork** and then **clone** this repository into your `lfz` folder on your current development environment.
