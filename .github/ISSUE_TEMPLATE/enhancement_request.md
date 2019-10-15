@@ -1,13 +1,13 @@
 ---
 name: Enhancement request
 about: Suggest a user-facing functional improvement to this project.
-title: "[NEW/INCREMENTAL] Pick one, then insert title here"
+title: "[NEW/INCREMENTAL/CONTENT] Pick one, then insert title here"
 labels: Enhancement, Needs More Info
 assignees: codingcodymiller
 
 ---
 
-**For instructor use only**
+**For staff use only**
 
 ### Enhancement Request
 > _To be filled out by author. Add the `Enhancement` and `Needs More Info` labels. Assign issue to self on creation._
@@ -16,7 +16,7 @@ assignees: codingcodymiller
 A clear and concise description of what the problem is. Ex. I'm always frustrated when [...]
 
 #### **Is your enhancement related to one or more existing features? Which one(s)?**
-Yes or No. Describe existing feature(s) from a student's perspective, including references to related issues.
+Yes or No. Describe existing feature(s) from a user's perspective, including references to related issues.
 
 #### **Describe the solution you'd like**
 A clear and concise description of what you want to happen.
@@ -27,7 +27,7 @@ A clear and concise description of any alternative solutions or enhancements you
 #### **Additional context**
 Add any other context, screenshots, or design documents about the enhancement request here.
 
-> _After all above sections are filled out, remove the `Needs More Info` label, then assign issue to the repository maintainer._
+> _After all the above sections are filled out, remove the `Needs More Info` label, then assign issue to the repository maintainer._
 
 ---
 
@@ -68,7 +68,7 @@ Because this repository has its pull request template designed for student use, 
 1. Replace the body of the pull request with the contents of the [Internal Repository Pull Request Template](https://github.com/Learning-Fuze/internal-repo-template/raw/master/.github/PULL_REQUEST_TEMPLATE.md).
 1. Follow the directions on the pull request.
 
-> _After all steps have been completed and integrated into the main development branch, add the `Ready for Testing` label, remove the `Ready for Implementation` label, and assign issue to tester for verification._
+> _After all the above steps have been completed and integrated into the main development branch, add the `Ready for Testing` label, remove the `Ready for Implementation` label, and assign issue to tester for verification._
 
 ---
 

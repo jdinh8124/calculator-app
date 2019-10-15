@@ -27,7 +27,7 @@ A clear and concise description of any alternative solutions or tooling enhancem
 #### **Additional context**
 Add any other context, screenshots, or design documents about the tooling enhancement request here.
 
-> _After all above sections are filled out, remove the `Needs More Info` label, then assign issue to the repository maintainer._
+> _After all the above sections are filled out, remove the `Needs More Info` label, then assign issue to the repository maintainer._
 
 ---
 
@@ -68,7 +68,7 @@ Because this repository has its pull request template designed for student use, 
 1. Replace the body of the pull request with the contents of the [Internal Repository Pull Request Template](https://github.com/Learning-Fuze/internal-repo-template/raw/master/.github/PULL_REQUEST_TEMPLATE.md).
 1. Follow the directions on the pull request.
 
-> _After all steps have been completed and integrated into the main development branch, add the `Ready for Testing` label, remove the `Ready for Implementation` label, and assign issue to tester for verification._
+> _After all the above steps have been completed and integrated into the main development branch, add the `Ready for Testing` label, remove the `Ready for Implementation` label, and assign issue to tester for verification._
 
 ---
 
