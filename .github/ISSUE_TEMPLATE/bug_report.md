@@ -79,11 +79,13 @@ What was the root cause of the bug?
 How can this type of bug be prevented in the future?
 
 #### **Opening Pull Requests**
-Because this repository has its pull request template designed for student use, pull requests that are made by staff must use the template for internal repo pull requests.
-1. Start a new pull request as normal.
-1. Pick the `base` and `compare` branches.
-1. Replace the body of the pull request with the contents of the [Internal Repository Pull Request Template](https://github.com/Learning-Fuze/internal-repo-template/raw/master/.github/PULL_REQUEST_TEMPLATE.md).
-1. Follow the directions on the pull request.
+After an attempted fix has been pushed to GitHub, open a pull request using the following URL template (filling in the compare branch name):
+```
+https://github.com/Learning-Fuze/calculator/compare/master...<COMPARE BRANCH>?assignees=codingcodymiller&&expand=1&&template=bug_fix.md&&labels=Bug+Needs%20More%20Info&&title=[BUG]%20Insert%20Fix%20Title%20Here
+```
+
+#### **After Merging Pull Requests**
+After a pull request referencing this issue has been merged, update the implementation sections above with any new information.
 
 > _After all debugging has been completed and integrated into the main development branch, add the `Ready for Testing` label, remove the `Ready for Implementation` label, and assign issue to tester for verification._
 

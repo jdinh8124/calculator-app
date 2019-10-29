@@ -23,7 +23,7 @@ A clear and concise description of what you want to change.
 A clear and concise description of any alternative solutions or features you've considered.
 
 #### **Additional context**
-Add any other context or screenshots about the feature request here.
+Add any other context or screenshots about the technical debt here.
 
 > _After all the above sections are filled out, remove the `Needs More Info` label, then assign issue to the repository maintainer._
 
@@ -60,11 +60,13 @@ If the technical debt fix can be broken down into sub-tasks/-issues, add checkli
 - [ ] Check off sub-tasks as they are implemented and added to a pull request
 
 #### **Opening Pull Requests**
-Because this repository has its pull request template designed for student use, pull requests that are made by staff must use the template for internal repo pull requests.
-1. Start a new pull request as normal.
-1. Pick the `base` and `compare` branches.
-1. Replace the body of the pull request with the contents of the [Internal Repository Pull Request Template](https://github.com/Learning-Fuze/internal-repo-template/raw/master/.github/PULL_REQUEST_TEMPLATE.md).
-1. Follow the directions on the pull request.
+After a technical debt fix has been pushed to GitHub, open a pull request using the following URL template (filling in the compare branch name):
+```
+https://github.com/Learning-Fuze/calculator/compare/master...<COMPARE BRANCH>?assignees=codingcodymiller&&expand=1&&template=technical_debt_paydown.md&&labels=Technical%20Debt+Needs%20More%20Info&&title=[DOCUMENTATION/CLEANUP/PERFORMANCE/MAINTAINABILITY/DEPENDENCY]%20Insert%20Title%20Here
+```
+
+#### **After Merging Pull Requests**
+After a pull request referencing this issue has been merged, check off any completed steps in the Implementation section above.
 
 > _After all the above steps have been completed and integrated into the main development branch, add the `Ready for Testing` label, remove the `Ready for Implementation` label, and assign issue to tester for verification._
 
