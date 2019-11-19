@@ -37,6 +37,10 @@ function applyClickHandlers(){
     stringNumberToPush = "";
     displayArray = [];
     updateDisplay();
+    var answer = calculate(calculationArray[0], calculationArray[1], calculationArray[2]);
+    console.log(answer);
+    displayArray.push(answer);
+    updateDisplay();
   }
 
 
