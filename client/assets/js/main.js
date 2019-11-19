@@ -1,5 +1,10 @@
 $(document).ready(applyClickHandlers)
 
+var calculationArray = [];
+var displayArray = [];
+var stringNumberToPush = "";
+// var calculationResult = null;
+
 function applyClickHandlers(){
   $("#number-block").on("click", ".number", numberButtonHandler)
   $("#operator-column").on("click", ".operator", operatorButtonHandler )
@@ -27,11 +32,18 @@ function applyClickHandlers(){
   function operatorButtonHandler(event){
     var inputtedOperator ="";
     inputtedOperator = $(event.currentTarget).find("p").text();
+    // if (isNaN(parseFloat(calculationArray[calculationArray.length - 2]))) {
+    //   displayArray.pop();
+    //   calculationArray.slice(calculationArray.length - 2);
+    //   console.log('inthenanfunction')
+
+    // }
     displayArray.push(inputtedOperator);
     updateDisplay();
     calculationArray.push(stringNumberToPush);
     console.log(calculationArray);
     calculationArray.push(inputtedOperator);
+    calculationArray.push("");
     console.log(calculationArray);
     stringNumberToPush = "";
   }
@@ -67,10 +79,7 @@ function applyClickHandlers(){
 
 
 
-var calculationArray = [];
-var displayArray = [];
-var stringNumberToPush = "";
-// var calculationResult = null;
+
 
 
 function calculate(num1, operator, num2){
