@@ -6,6 +6,8 @@ function applyClickHandlers(){
   $("#equals").on("click", equalsButtonHandler)
   $("#c-button").on("click", function () {
     console.log("hello");
+
+    console.log("finished");
   })
 
   $("#ac-button").on("click", acDisplay);
@@ -90,5 +92,3 @@ function calculate(num1, operator, num2){
     }
     return result;
   }
-
-  console.log(calculate("19", "+" , "1"));
