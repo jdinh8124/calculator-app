@@ -15,7 +15,7 @@ function applyClickHandlers(){
 
 
   }
-
+}
 
   function operatorButtonHandler(event){
     console.log(event);
@@ -45,7 +45,7 @@ function applyClickHandlers(){
     $("#display-text").text(displayText);
   }
 
-}
+
 
 var calculationArray = [];
 var displayArray = [];
@@ -53,7 +53,27 @@ var stringNumberToPush = "";
 var calculationResult = null;
 
 
-function doMath(){
+function calculate(num1, operator, num2){
+  var number1 = parseFloat(num1);
+  var number2 = parseFloat(num2);
+  var result = null;
+    switch (operator) {
+      case "+":
+        result = number1 + number2;
+        break;
+      case "-":
+        result = number1 + number2;
+        break;
+      case "/":
+        result = number1 / number2;
+        break;
+      case "x":
+      case "X":
+      case "*":
+        result = number1 * number2;
+        break;
+    }
+    return result;
+  }
 
-
-}
+  console.log(calculate("19", "+" , "1"));
