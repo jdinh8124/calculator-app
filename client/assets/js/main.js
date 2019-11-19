@@ -4,6 +4,11 @@ function applyClickHandlers(){
   $("#number-block").on("click", ".number", numberButtonHandler)
   $("#operator-column").on("click", ".operator", operatorButtonHandler )
   $("#equals").on("click", equalsButtonHandler)
+  $("#c-button").on("click", function () {
+    console.log("hello");
+  })
+
+  $("#ac-button").on("click", acDisplay);
   function numberButtonHandler(event){
     var inputtedNumber = "";
     inputtedNumber = $(event.currentTarget).find("p").text();
@@ -21,7 +26,6 @@ function applyClickHandlers(){
     console.log(event);
     var inputtedOperator ="";
     inputtedOperator = $(event.currentTarget).find("p").text();
-    //Might be missing a step += into a variable? but I am not sure
     displayArray.push(inputtedOperator);
     updateDisplay();
     calculationArray.push(stringNumberToPush);
@@ -49,12 +53,19 @@ function applyClickHandlers(){
     $("#display-text").text(displayText);
   }
 
+  function acDisplay(){
+    calculationArray = [];
+    displayArray = [];
+    stringNumberToPush = "";
+    $("#display-text").text(0);
+  }
+
 
 
 var calculationArray = [];
 var displayArray = [];
 var stringNumberToPush = "";
-var calculationResult = null;
+// var calculationResult = null;
 
 
 function calculate(num1, operator, num2){
