@@ -25,7 +25,6 @@ function applyClickHandlers(){
 }
 
   function operatorButtonHandler(event){
-    console.log(event);
     var inputtedOperator ="";
     inputtedOperator = $(event.currentTarget).find("p").text();
     displayArray.push(inputtedOperator);
@@ -38,7 +37,12 @@ function applyClickHandlers(){
   }
 
   function equalsButtonHandler(event){
-    console.log(event);
+    if (stringNumberToPush === ""){
+      return;
+    }
+    if (calculationArray[1] === undefined){
+      return;
+    }
     calculationArray.push(stringNumberToPush);
     stringNumberToPush = "";
     displayArray = [];
@@ -48,7 +52,6 @@ function applyClickHandlers(){
     displayArray.push(answer);
     updateDisplay();
   }
-
 
   function updateDisplay() {
     var displayText = displayArray.join("");
