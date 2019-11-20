@@ -117,5 +117,6 @@ function calculate(num1, operator, num2){
         result = number1 * number2;
         break;
     }
+    calculationArray.splice(0,4, result);
     return result;
   }
