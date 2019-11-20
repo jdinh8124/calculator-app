@@ -9,7 +9,7 @@ function applyClickHandlers(){
   $("#number-block").on("click", ".number", numberButtonHandler)
   $("#operator-column").on("click", ".operator", operatorButtonHandler )
   $("#equals").on("click", equalsButtonHandler)
-
+  $("#decimal").on("click", decimalButton)
   $("#c-button").on("click", function () {
     displayArray.pop();
     updateDisplay()
@@ -18,12 +18,14 @@ function applyClickHandlers(){
 
   $("#ac-button").on("click", acDisplay);
   function numberButtonHandler(event){
+    if(calculationArray > 0){
+      calculationArray = [];
+      displayArray = [];
+    }
     var inputtedNumber = "";
     inputtedNumber = $(event.currentTarget).find("p").text();
-    console.log(inputtedNumber);
     stringNumberToPush += inputtedNumber;
     displayArray.push(inputtedNumber);
-    console.log(displayArray)
     updateDisplay();
 
 
@@ -35,34 +37,27 @@ function applyClickHandlers(){
     if(displayArray[0] === undefined){
       return;
     }
-    else if(calculationArray[calculationArray.length - 1] === "") {
+    else if(calculationArray > '' && isNaN(calculationArray[calculationArray.length - 1])) {
       calculationArray.pop();
-      calculationArray.pop();
-      console.log("doublepop",calculationArray)
       displayArray.pop();
-      updateDisplay();
       inputtedOperator = $(event.currentTarget).find("p").text();
       displayArray.push(inputtedOperator);
       updateDisplay();
-      console.log(calculationArray);
       calculationArray.push(inputtedOperator);
-      calculationArray.push("");
-      console.log(calculationArray);
       stringNumberToPush = "";
     }
     else{
     inputtedOperator = $(event.currentTarget).find("p").text();
     displayArray.push(inputtedOperator);
     updateDisplay();
-    calculationArray.push(stringNumberToPush);
-    console.log(calculationArray);
+    if(stringNumberToPush > ""){
+      calculationArray.push(stringNumberToPush);
+    }
     calculationArray.push(inputtedOperator);
-    calculationArray.push("");
-    console.log(calculationArray);
     stringNumberToPush = "";
   }
   }
-  function equalsButtonHandler(event){
+  function equalsButtonHandler(){
     if (stringNumberToPush === ""){
       return;
     }
@@ -70,12 +65,10 @@ function applyClickHandlers(){
       return;
     }
     calculationArray.push(stringNumberToPush);
-    console.log("string number was pushed")
     stringNumberToPush = "";
     displayArray = [];
     updateDisplay();
-    var answer = calculate(calculationArray[0], calculationArray[1], calculationArray[3]);
-    console.log(answer);
+    var answer = calculate(calculationArray[0], calculationArray[1], calculationArray[2]);
     displayArray.push(answer);
     updateDisplay();
   }
@@ -92,10 +85,13 @@ function applyClickHandlers(){
     $("#display-text").text(0);
   }
 
-
-
-
-
+function decimalButton(event){
+  var inputtedNumber = "";
+  inputtedNumber = $(event.currentTarget).find("p").text();
+  stringNumberToPush += inputtedNumber;
+  displayArray.push(inputtedNumber);
+  updateDisplay();
+}
 
 function calculate(num1, operator, num2){
   var number1 = parseFloat(num1);
@@ -106,7 +102,7 @@ function calculate(num1, operator, num2){
         result = number1 + number2;
         break;
       case "-":
-        result = number1 + number2;
+        result = number1 - number2;
         break;
       case "/":
         result = number1 / number2;
@@ -117,6 +113,6 @@ function calculate(num1, operator, num2){
         result = number1 * number2;
         break;
     }
-    calculationArray.splice(0,4, result);
+    calculationArray.splice(0,3, result);
     return result;
   }
