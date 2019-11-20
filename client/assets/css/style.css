@@ -13,7 +13,7 @@ body * {
     transform: translate(-50%, -50%);
     height: 70%;
     width: 30%;
-    background-color: lavender;
+    background-color: black;
 }
 .display-text {
     text-align: right;
@@ -26,7 +26,7 @@ body * {
     /* margin: 0 auto; */
     height: 15%;
     width: 85%;
-    background-color: peachpuff;
+    background-color: white;
     left: 7.5%;
 }
 
@@ -37,7 +37,8 @@ body * {
     left: 7.5%;
     height: 15%;
     width: 85%;
-    background-color: chartreuse;
+    background-color: black;
+    border: 1px solid white ;
 }
 .c-button, .ac-button {
     position: relative;
@@ -47,7 +48,7 @@ body * {
     height: 75%;
     width: 45%;
     display: inline-block;
-    background-color: rebeccapurple;
+    background-color: firebrick;
     margin: 0px;
 }
 
@@ -56,35 +57,39 @@ body * {
     position: relative;
     height: 60%;
     width: 60%;
-    background-color: chartreuse;
+    background-color: black;
     top: 28px;
     left: 7.5%;
     margin-top: 8px;
     vertical-align: top;
+    border: 1px solid white ;
 }
 .number, .decimal, .equals {
+    border: 1px solid white ;
     position: relative;
     display: inline-block;
     height: 23%;
     width: 32%;
     left: 2px;
     margin-top: 3px;
-    background-color: hotpink;
+    background-color: firebrick;
 }
 .operator-column {
     position: relative;
     display: inline-block;
     height: 60%;
     width: 24%;
-    background-color: chartreuse;
+    background-color: firebrick;
     top: 36px;
     left: 7.5%;
+    border: 1px solid white ;
 }
 .operator {
     position: relative;
     margin-top: 3px;
     height: 24%;
-    background-color: cornflowerblue;
+    background-color: firebrick;
+    border: 1px solid white ;
 }
 .center {
     position: absolute;
