@@ -62,6 +62,7 @@ function applyClickHandlers(){
       updateDisplay();
     }
     if (calculationArray[1] === undefined){
+      //if(stringnumbertopush === "" && !calculationResult)
       return;
     }
 
@@ -78,7 +79,7 @@ function applyClickHandlers(){
       stringNumberToPush = "";
       displayArray = [];
 
-      while(calculationArray > 1){
+      while(calculationArray.length > 1){
         for(var calcIndex = 0; calcIndex < calculationArray.length; calcIndex++ ){
           if (calculationArray[calcIndex] === "*" || calculationArray[calcIndex] === "/" ){
           var resultOfPemdas = calculate(calculationArray[calcIndex -1], calculationArray[calcIndex], calculationArray[calcIndex + 1]);
@@ -96,7 +97,6 @@ function applyClickHandlers(){
 
         }
 
-      //Another for loop for the + - with call index --
     }
 
     }
