@@ -73,21 +73,33 @@ function applyClickHandlers(){
     displayArray.push(answer);
     updateDisplay();
     }
-
     if(calculationArray.length > 3){
       console.log("in the second if")
       stringNumberToPush = "";
       displayArray = [];
 
-      while(calculationArray.length >= 3){
+      while(calculationArray > 1){
         for(var calcIndex = 0; calcIndex < calculationArray.length; calcIndex++ ){
           if (calculationArray[calcIndex] === "*" || calculationArray[calcIndex] === "/" ){
           var resultOfPemdas = calculate(calculationArray[calcIndex -1], calculationArray[calcIndex], calculationArray[calcIndex + 1]);
-          calculationArray.splice(calculationArray[calcIndex - 1], 3, resultOfPemdas);
+          calculationArray.splice(calcIndex - 1, 3, resultOfPemdas);
+          --calcIndex;
         }
       }
+        //Another for loop for the + - with call index --
+        for (var calcIndex1 = 0; calcIndex1 < calculationArray.length; calcIndex1++) {
+          if (calculationArray[calcIndex1] === "+" || calculationArray[calcIndex1] === "-") {
+            var resultOfPemdas1 = calculate(calculationArray[calcIndex1 - 1], calculationArray[calcIndex1], calculationArray[calcIndex1 + 1]);
+            calculationArray.splice(calcIndex - 1, 3, resultOfPemdas1);
+            --calcIndex1;
+          }
+
+        }
+
+      //Another for loop for the + - with call index --
     }
-  }
+
+    }
   }
   function updateDisplay() {
     var displayText = displayArray.join("");
@@ -139,7 +151,7 @@ function calculate(num1, operator, num2){
     result = "Error"
   }
   if(!Number.isInteger(result)){
-    return result.toFixed(9);
+    return ""+ result.toFixed(9);
   }
     return result + "";
   }
