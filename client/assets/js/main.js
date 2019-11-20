@@ -3,7 +3,6 @@ $(document).ready(applyClickHandlers)
 var calculationArray = [];
 var displayArray = [];
 var stringNumberToPush = "";
-// var calculationResult = null;
 
 function applyClickHandlers(){
   $("#number-block").on("click", ".number", numberButtonHandler)
@@ -15,7 +14,6 @@ function applyClickHandlers(){
     updateDisplay()
     stringNumberToPush = stringNumberToPush.slice(0, - 1)
   })
-
   $("#ac-button").on("click", acDisplay);
   function numberButtonHandler(event){
     if(calculationArray > 0){
@@ -27,8 +25,6 @@ function applyClickHandlers(){
     stringNumberToPush += inputtedNumber;
     displayArray.push(inputtedNumber);
     updateDisplay();
-
-
   }
 }
     //if nothing dont push operator, else if push operator else pop 2 and push new operator and string
@@ -37,7 +33,8 @@ function applyClickHandlers(){
     if(displayArray[0] === undefined){
       return;
     }
-    else if(calculationArray > '' && isNaN(calculationArray[calculationArray.length - 1])) {
+    else if (calculationArray > '' && isNaN(calculationArray[calculationArray.length - 1]) && stringNumberToPush === "") {
+      console.log('poping opertaor')
       calculationArray.pop();
       displayArray.pop();
       inputtedOperator = $(event.currentTarget).find("p").text();
@@ -69,6 +66,7 @@ function applyClickHandlers(){
     displayArray = [];
     updateDisplay();
     var answer = calculate(calculationArray[0], calculationArray[1], calculationArray[2]);
+
     displayArray.push(answer);
     updateDisplay();
   }
@@ -77,7 +75,6 @@ function applyClickHandlers(){
     var displayText = displayArray.join("");
     $("#display-text").text(displayText);
   }
-
   function acDisplay(){
     calculationArray = [];
     displayArray = [];
@@ -86,13 +83,15 @@ function applyClickHandlers(){
   }
 
 function decimalButton(event){
+  if (displayArray[displayArray.length - 1] === "."){
+    return;
+  }
   var inputtedNumber = "";
   inputtedNumber = $(event.currentTarget).find("p").text();
   stringNumberToPush += inputtedNumber;
   displayArray.push(inputtedNumber);
   updateDisplay();
 }
-
 function calculate(num1, operator, num2){
   var number1 = parseFloat(num1);
   var number2 = parseFloat(num2);
@@ -114,5 +113,8 @@ function calculate(num1, operator, num2){
         break;
     }
     calculationArray.splice(0,3, result);
+  if (result === Infinity) {
+    result = "Error"
+  }
     return result;
   }
