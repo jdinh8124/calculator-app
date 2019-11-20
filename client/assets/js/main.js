@@ -56,21 +56,39 @@ function applyClickHandlers(){
   }
   function equalsButtonHandler(){
     if (stringNumberToPush === ""){
-      return;
+      stringNumberToPush = calculationArray[0];
+      calculationArray.push(stringNumberToPush);
+      stringNumberToPush = "";
+      updateDisplay();
     }
     if (calculationArray[1] === undefined){
       return;
     }
+
     calculationArray.push(stringNumberToPush);
+    if(calculationArray.length === 3){
     stringNumberToPush = "";
     displayArray = [];
-    updateDisplay();
     var answer = calculate(calculationArray[0], calculationArray[1], calculationArray[2]);
-
     displayArray.push(answer);
     updateDisplay();
-  }
+    }
 
+    if(calculationArray.length > 3){
+      console.log("in the second if")
+      stringNumberToPush = "";
+      displayArray = [];
+
+      while(calculationArray.length >= 3){
+        for(var calcIndex = 0; calcIndex < calculationArray.length; calcIndex++ ){
+          if (calculationArray[calcIndex] === "*" || calculationArray[calcIndex] === "/" ){
+          var resultOfPemdas = calculate(calculationArray[calcIndex -1], calculationArray[calcIndex], calculationArray[calcIndex + 1]);
+          calculationArray.splice(calculationArray[calcIndex - 1], 3, resultOfPemdas);
+        }
+      }
+    }
+  }
+  }
   function updateDisplay() {
     var displayText = displayArray.join("");
     $("#display-text").text(displayText);
@@ -112,9 +130,16 @@ function calculate(num1, operator, num2){
         result = number1 * number2;
         break;
     }
+  if(calculationArray.length > 3){
+    console.log('in the if statement calculation!, do the work in the for loop')
+  }else{
     calculationArray.splice(0,3, result);
+  }
   if (result === Infinity) {
     result = "Error"
   }
-    return result;
+  if(!Number.isInteger(result)){
+    return result.toFixed(9);
+  }
+    return result + "";
   }
