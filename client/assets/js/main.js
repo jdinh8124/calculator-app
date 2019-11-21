@@ -87,7 +87,7 @@ function applyClickHandlers(){
           --calcIndex;
         }
       }
-        //Another for loop for the + - with call index --
+        // Another for loop for the + - with call index --
         for (var calcIndex1 = 0; calcIndex1 < calculationArray.length; calcIndex1++) {
           if (calculationArray[calcIndex1] === "+" || calculationArray[calcIndex1] === "-") {
             var resultOfPemdas1 = calculate(calculationArray[calcIndex1 - 1], calculationArray[calcIndex1], calculationArray[calcIndex1 + 1]);
