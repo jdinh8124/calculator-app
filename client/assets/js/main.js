@@ -55,22 +55,26 @@ function applyClickHandlers(){
   }
   }
   function equalsButtonHandler(){
-    if (stringNumberToPush === ""){
+    var answer;
+    if (stringNumberToPush === "" && calculationArray[1] !== undefined){
       stringNumberToPush = calculationArray[0];
       calculationArray.push(stringNumberToPush);
       stringNumberToPush = "";
-      updateDisplay();
-    }
-    if (calculationArray[1] === undefined){
-      //if(stringnumbertopush === "" && !calculationResult)
+      answer = calculate(calculationArray[0], calculationArray[1], calculationArray[2]);
+      calculationArray.splice(0, 3, answer);
       return;
     }
-
+    if (calculationArray[1] === undefined){
+      return;
+    }
+    if(calculationArray[calculationArray.length-1]){
     calculationArray.push(stringNumberToPush);
+    }
     if(calculationArray.length === 3){
     stringNumberToPush = "";
     displayArray = [];
-    var answer = calculate(calculationArray[0], calculationArray[1], calculationArray[2]);
+    answer = calculate(calculationArray[0], calculationArray[1], calculationArray[2]);
+    calculationArray.splice(0, 3, answer);
     displayArray.push(answer);
     updateDisplay();
     }
@@ -78,11 +82,11 @@ function applyClickHandlers(){
       console.log("in the second if")
       stringNumberToPush = "";
       displayArray = [];
-
+      var resultOfPemdas;
       while(calculationArray.length > 1){
         for(var calcIndex = 0; calcIndex < calculationArray.length; calcIndex++ ){
           if (calculationArray[calcIndex] === "*" || calculationArray[calcIndex] === "/" ){
-          var resultOfPemdas = calculate(calculationArray[calcIndex -1], calculationArray[calcIndex], calculationArray[calcIndex + 1]);
+           resultOfPemdas = calculate(calculationArray[calcIndex -1], calculationArray[calcIndex], calculationArray[calcIndex + 1]);
           calculationArray.splice(calcIndex - 1, 3, resultOfPemdas);
           --calcIndex;
         }
@@ -90,15 +94,16 @@ function applyClickHandlers(){
         // Another for loop for the + - with call index --
         for (var calcIndex1 = 0; calcIndex1 < calculationArray.length; calcIndex1++) {
           if (calculationArray[calcIndex1] === "+" || calculationArray[calcIndex1] === "-") {
-            var resultOfPemdas1 = calculate(calculationArray[calcIndex1 - 1], calculationArray[calcIndex1], calculationArray[calcIndex1 + 1]);
-            calculationArray.splice(calcIndex - 1, 3, resultOfPemdas1);
+             resultOfPemdas = calculate(calculationArray[calcIndex1 - 1], calculationArray[calcIndex1], calculationArray[calcIndex1 + 1]);
+            calculationArray.splice(calcIndex1 - 1, 3, resultOfPemdas);
             --calcIndex1;
           }
 
         }
 
     }
-
+      displayArray.push(resultOfPemdas)
+      updateDisplay();
     }
   }
   function updateDisplay() {
@@ -116,8 +121,13 @@ function decimalButton(event){
   if (displayArray[displayArray.length - 1] === "."){
     return;
   }
+  if (calculationArray > 0) {
+    calculationArray = [];
+    displayArray = [];
+  }
   var inputtedNumber = "";
   inputtedNumber = $(event.currentTarget).find("p").text();
+
   stringNumberToPush += inputtedNumber;
   displayArray.push(inputtedNumber);
   updateDisplay();
@@ -142,16 +152,16 @@ function calculate(num1, operator, num2){
         result = number1 * number2;
         break;
     }
-  if(calculationArray.length > 3){
-    console.log('in the if statement calculation!, do the work in the for loop')
-  }else{
-    calculationArray.splice(0,3, result);
-  }
   if (result === Infinity) {
     result = "Error"
   }
-  if(!Number.isInteger(result)){
-    return ""+ result.toFixed(9);
+  if(result === 0){
+    calculationArray = [];
+    displayArray = [];
+    updateDisplay();
   }
-    return result + "";
+  if(!Number.isInteger(result)){
+    return result.toFixed(2);
+  }
+    return result;
   }
