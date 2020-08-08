@@ -102,3 +102,18 @@ body * {
 p {
     font-size: 3rem;
 }
+
+
+@media only screen and (max-width: 1400px) {
+
+.calculator-body {
+    width: 60%;
+}
+}
+
+@media only screen and (max-width: 900px) {
+
+.calculator-body {
+    width: 95%;
+}
+}
